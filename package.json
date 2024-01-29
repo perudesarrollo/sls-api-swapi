@@ -1,0 +1,20 @@
+{
+  "name": "sls-api-test",
+  "version": "1.0.0",
+  "description": "sls-api-test",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Max",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.1377.0",
+    "axios": "^1.4.0",
+    "joi": "^17.12.1",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "serverless": "^3.30.1"
+  }
+}

@@ -1,0 +1,175 @@
+{
+	"info": {
+		"_postman_id": "fb095c29-e846-48d8-a4d5-fa36837574c7",
+		"name": "Personas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "49361"
+	},
+	"item": [
+		{
+			"name": "Personas",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"4\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://kta94gom2c.execute-api.us-east-1.amazonaws.com/swapi/personas",
+					"protocol": "https",
+					"host": [
+						"kta94gom2c",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"swapi",
+						"personas"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Personas",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"2\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://kta94gom2c.execute-api.us-east-1.amazonaws.com/swapi/personas",
+							"protocol": "https",
+							"host": [
+								"kta94gom2c",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"swapi",
+								"personas"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"status\": \"success\",\n  \"payload\": {\n    \"id\": \"56beb818-ec73-5d51-870a-c2b14a246ecd\",\n    \"nombre\": \"Darth Vader\",\n    \"altura\": \"202\",\n    \"peso\": \"136\",\n    \"color_cabello\": \"none\",\n    \"color_piel\": \"white\",\n    \"color_ojos\": \"yellow\",\n    \"anio_nacimiento\": \"41.9BBY\",\n    \"genero\": \"male\",\n    \"planeta_natal\": \"https://swapi.py4e.com/api/planets/1/\",\n    \"peliculas\": [\n      \"https://swapi.py4e.com/api/films/1/\",\n      \"https://swapi.py4e.com/api/films/2/\",\n      \"https://swapi.py4e.com/api/films/3/\",\n      \"https://swapi.py4e.com/api/films/6/\"\n    ],\n    \"especies\": [\n      \"https://swapi.py4e.com/api/species/1/\"\n    ],\n    \"vehiculos\": [],\n    \"naves_estelares\": [\n      \"https://swapi.py4e.com/api/starships/13/\"\n    ],\n    \"creado\": \"2014-12-10T15:18:20.704000Z\",\n    \"modificado\": \"2014-12-20T21:17:50.313000Z\",\n    \"url\": \"https://swapi.py4e.com/api/people/4/\"\n  }\n}"
+				}
+			]
+		},
+		{
+			"name": "Personas",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "content-type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://kta94gom2c.execute-api.us-east-1.amazonaws.com/swapi/personas",
+					"protocol": "https",
+					"host": [
+						"kta94gom2c",
+						"execute-api",
+						"us-east-1",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"swapi",
+						"personas"
+					]
+				},
+				"description": "Listar personas"
+			},
+			"response": [
+				{
+					"name": "Personas",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "content-type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://kta94gom2c.execute-api.us-east-1.amazonaws.com/swapi/personas",
+							"protocol": "https",
+							"host": [
+								"kta94gom2c",
+								"execute-api",
+								"us-east-1",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"swapi",
+								"personas"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n  \"status\": \"success\",\n  \"payload\": [\n    {\n      \"planeta_natal\": \"https://swapi.py4e.com/api/planets/1/\",\n      \"nombre\": \"C-3PO\",\n      \"color_cabello\": \"n/a\",\n      \"vehiculos\": [],\n      \"altura\": \"167\",\n      \"modificado\": \"2014-12-20T21:17:50.309000Z\",\n      \"url\": \"https://swapi.py4e.com/api/people/2/\",\n      \"peso\": \"75\",\n      \"peliculas\": [\n        \"https://swapi.py4e.com/api/films/1/\",\n        \"https://swapi.py4e.com/api/films/2/\",\n        \"https://swapi.py4e.com/api/films/3/\",\n        \"https://swapi.py4e.com/api/films/4/\",\n        \"https://swapi.py4e.com/api/films/5/\",\n        \"https://swapi.py4e.com/api/films/6/\"\n      ],\n      \"naves_estelares\": [],\n      \"color_piel\": \"gold\",\n      \"especies\": [\n        \"https://swapi.py4e.com/api/species/2/\"\n      ],\n      \"creado\": \"2014-12-10T15:10:51.357000Z\",\n      \"id\": \"88fcb92e-c9b0-5598-85f1-f1b92d109d6e\",\n      \"color_ojos\": \"yellow\",\n      \"anio_nacimiento\": \"112BBY\",\n      \"genero\": \"n/a\"\n    }\n  ]\n}"
+				}
+			]
+		}
+	]
+}

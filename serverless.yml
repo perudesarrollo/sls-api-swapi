@@ -1,0 +1,53 @@
+service: sls-api-test
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  region: us-east-1
+  stage: dev
+  environment:
+    LAMBDA_PEOPLE_TABLE: ${self:custom.peopleTable}
+    LAMBDA_NAMESPACE_ID: 1b671a64-40d5-491e-99b0-da01ff1f3341
+  iamRoleStatements:
+  - Effect: Allow
+    Action:
+      - dynamodb:*
+    Resource:
+      - arn:aws:dynamodb:${self:provider.region}:${aws:accountId}:table/${self:custom.peopleTable}
+
+package: 
+  individually: true
+
+custom:
+  peopleTable: ${sls:stage}-swapi-persona-table
+
+functions:
+  crearPersona:
+    handler: src/controllers/PersonaController.crearPersona
+    events:
+      - httpApi:
+          path: /swapi/personas
+          method: post
+          cors: true
+
+  getPersona:
+    handler: src/controllers/PersonaController.listarPersonas
+    events:
+      - httpApi:
+          path: /swapi/personas
+          method: get
+
+resources:
+  Resources:
+    TaskTable:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: ${self:custom.peopleTable}
+        BillingMode: PAY_PER_REQUEST
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH

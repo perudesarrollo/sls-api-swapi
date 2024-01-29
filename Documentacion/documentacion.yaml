@@ -1,0 +1,107 @@
+openapi: 3.0.0
+info:
+  title: Personas
+  version: 1.0.0
+servers:
+  - url: 'https://kta94gom2c.execute-api.us-east-1.amazonaws.com'
+paths:
+  /swapi/personas:
+    post:
+      tags:
+        - General
+      summary: Personas
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              example:
+                id: '4'
+      responses:
+        '201':
+          description: Created
+          headers:
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                status: success
+                payload:
+                  id: 56beb818-ec73-5d51-870a-c2b14a246ecd
+                  nombre: Darth Vader
+                  altura: '202'
+                  peso: '136'
+                  color_cabello: none
+                  color_piel: white
+                  color_ojos: yellow
+                  anio_nacimiento: 41.9BBY
+                  genero: male
+                  planeta_natal: 'https://swapi.py4e.com/api/planets/1/'
+                  peliculas:
+                    - 'https://swapi.py4e.com/api/films/1/'
+                    - 'https://swapi.py4e.com/api/films/2/'
+                    - 'https://swapi.py4e.com/api/films/3/'
+                    - 'https://swapi.py4e.com/api/films/6/'
+                  especies:
+                    - 'https://swapi.py4e.com/api/species/1/'
+                  vehiculos: []
+                  naves_estelares:
+                    - 'https://swapi.py4e.com/api/starships/13/'
+                  creado: '2014-12-10T15:18:20.704000Z'
+                  modificado: '2014-12-20T21:17:50.313000Z'
+                  url: 'https://swapi.py4e.com/api/people/4/'
+    get:
+      tags:
+        - General
+      summary: Personas
+      description: Listar personas
+      parameters:
+        - name: content-type
+          in: header
+          schema:
+            type: string
+          example: application/json
+      responses:
+        '200':
+          description: OK
+          headers:
+            Content-Type:
+              schema:
+                type: string
+                example: application/json
+          content:
+            application/json:
+              schema:
+                type: object
+              example:
+                status: success
+                payload:
+                  - planeta_natal: 'https://swapi.py4e.com/api/planets/1/'
+                    nombre: C-3PO
+                    color_cabello: n/a
+                    vehiculos: []
+                    altura: '167'
+                    modificado: '2014-12-20T21:17:50.309000Z'
+                    url: 'https://swapi.py4e.com/api/people/2/'
+                    peso: '75'
+                    peliculas:
+                      - 'https://swapi.py4e.com/api/films/1/'
+                      - 'https://swapi.py4e.com/api/films/2/'
+                      - 'https://swapi.py4e.com/api/films/3/'
+                      - 'https://swapi.py4e.com/api/films/4/'
+                      - 'https://swapi.py4e.com/api/films/5/'
+                      - 'https://swapi.py4e.com/api/films/6/'
+                    naves_estelares: []
+                    color_piel: gold
+                    especies:
+                      - 'https://swapi.py4e.com/api/species/2/'
+                    creado: '2014-12-10T15:10:51.357000Z'
+                    id: 88fcb92e-c9b0-5598-85f1-f1b92d109d6e
+                    color_ojos: yellow
+                    anio_nacimiento: 112BBY
+                    genero: n/a
